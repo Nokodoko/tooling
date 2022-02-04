@@ -1,0 +1,11 @@
+#------colorls------#
+alias l='colorls -1 --git-status'
+alias ls='colorls --git-status'
+alias lsd='colorls -d git-status'
+alias ll='colorls -1 --git-status'
+alias la='colorls --git-status -a'
+#alias ls='colorls --sd'
+alias lr='colorls -r'
+alias tree='colorls --~git-status --tree' 
+alias lgit='colorls --gs'
+alias lgt='colorls --gs -t'

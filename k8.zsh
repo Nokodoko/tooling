@@ -1,0 +1,6 @@
+alias ctx='kubectx'
+alias kcs='kubectx staging'
+alias kcj='kubectx staging-fuji'
+alias kserve='kubectx service'
+alias kgn='kubectl get nodes -o wide'
+alias kgp='kubectl get pods -o wide'
