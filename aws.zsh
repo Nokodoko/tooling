@@ -22,15 +22,27 @@ function lsami() {
     aws$1 ec2 describe-instances | gp -i imageid | cut -d: -f2| sed 's/"//g' | sed 's/,//'
 }
 
-#launch ec2
-function launch() {
-    aws ec2 run-instances --image-id $1 --count 1 --instance-type t2.micro --key-name $2 --security-group-ids $3 --subnet-id $4
-}
-#aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
-
 #aws-cli commands with alternate profile
 function awsc(){
     aws $@ --profile cMonty614
+}
+
+function insid() {
+    lsec2 | gp -i i  | sed 's/"//g' | sed 's/,//' | gp c |sed -n ${1}p
+}
+
+function insidc() {
+    lsec2c | gp -i i  | sed 's/"//g' | sed 's/,//' | gp c |sed -n ${1}p
+}
+
+#launch ec2
+function startec2() {
+    awsc ec2 start-instances --instance-ids $(insidc $@)
+}
+
+#stop ec2
+function stopec2() {
+    awsc ec2 stop-instances --instance-ids $(insidc $@)
 }
 
 autoload bashcompinit && bashcompinit
