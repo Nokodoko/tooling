@@ -85,18 +85,8 @@ alias gp='rg'
 alias repo='c ~/capacity/repos/'
 alias vpn='openvpn3 session-start --background --config ~/.pass/client.ovpn'
 alias vpns='openvpn3 sessions-list'
-alias awws='aws-mfa --device arn:aws:iam::632808888887:mfa/chris.montgomery --duration 86400'
-alias paws='aws-mfa --device arn:aws:iam::591885507682:mfa/cMonty614 --profile cMonty614 --duration 86400'
-alias awsid='aws sts get-caller-identity
-'
 
 #------FUNCTION------#
-function z(){
-    zathura $1 &
-    disown zathura
-    exit
-}
-
 function c(){
     cd $1 
     colorls --git-status
