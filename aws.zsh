@@ -7,9 +7,9 @@ alias paws='aws-mfa --device arn:aws:iam::591885507682:mfa/cMonty614 --profile c
 
 #reset user-password
 function resetpass() {
-    genPass >> newpass.txt; 
+    genPass > newpass.txt; 
     aws iam update-login-profile --user-name $1 --password $(cat newpass.txt);
-    cat newpass.txt | pbcopy
+    cat newpass.txt 
     rm newpass.txt
 }
 
