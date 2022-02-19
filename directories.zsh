@@ -10,6 +10,7 @@ alias mit='c ~/MIT'
 alias music='c ~/music'
 alias ws='wiki-search'
 alias manual='c ~/manuals/'
+
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
 
@@ -47,8 +48,3 @@ alias zconf='c ~/.zsh/tooling/'
 alias vconf='c ~/.config/nvim/lua/n0ko/'
 alias conf='c ~/.config'
 alias vimrc='v ~/.config/nvim/init.vim'
-
-#xorg
-alias proj='c ~/project_1/'
-alias xre='v ~/.Xresources'
-alias change='xrdb ~/.Xresources'
