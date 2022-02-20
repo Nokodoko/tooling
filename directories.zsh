@@ -19,7 +19,8 @@ alias aconf='v ~/.aws/credentials'
 
 #fonts
 alias fonts='c /usr/share/fonts/'
-alias lsp='c /home/n0ko/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua/lspconfig/server_configurations'
+alias lsp='c /home/n0ko/.local/share/nvim/lsp_servers/'
+alias lspconfig='c /home/n0ko/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua/lspconfig/server_configurations'
 
 #Capacity
 alias repo='c ~/capacity/repos/'
