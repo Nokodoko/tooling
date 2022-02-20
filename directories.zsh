@@ -47,5 +47,6 @@ alias gu='c ~/goUltimate v main.go'
 #configs
 alias zconf='c ~/.zsh/tooling/'
 alias vconf='c ~/.config/nvim/lua/n0ko/'
+alias mconf='v ~/.config/neomutt/neomuttrc'
 alias conf='c ~/.config'
 alias vimrc='v ~/.config/nvim/init.vim'
