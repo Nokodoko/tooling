@@ -49,6 +49,10 @@ function stopec2() {
 }
 
 #IAM FUNCTIONS#
+function addgrouph(){
+    echo "group-name"
+}
+
 function addgroup(){
     aws iam create-group --group-name $@
 }
