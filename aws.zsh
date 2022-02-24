@@ -69,6 +69,10 @@ function adduser(){
     aws iam add-user-to-group --group-name $1 --user-name $2
 }
 
+function listgroups(){
+    aws iam list-groups
+}
+
 #removeuser
 function removeuserh(){
     echo "group-name, user-name"
