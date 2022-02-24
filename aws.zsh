@@ -48,6 +48,40 @@ function stopec2() {
     awsc ec2 stop-instances --instance-ids $(insidc $@)
 }
 
+#IAM FUNCTIONS#
+function addgroup(){
+    aws iam create-group --group-name $@
+}
+
+function deletegroup(){
+    aws iam delete-group --group-name $@
+}
+
+#Adduser
+function adduserh(){
+    echo "group-name, user-name"
+}
+function adduser(){
+    aws iam add-user-to-group --group-name $1 --user-name $2
+}
+
+#removeuser
+function removeuserh(){
+    echo "group-name, user-name"
+}
+function removeuser(){
+    aws iam remove-user-from-group --group-name $1 --user-name $2
+}
+
+#addpolicy
+function addpolicy(){
+    aws iam put-group-policy --group-name $1 --policy-document $2 --policy-name $3
+}
+function addpolicyh(){
+    echo "group-name, policy-document, policy-name"
+}
+
+
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/sbin/aws_completer' aws

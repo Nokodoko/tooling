@@ -6,8 +6,6 @@ alias dell='n0ko@Dell'
 alias s='scp'
 alias sr='scp -r'
 alias n='nmap'
-alias ter='terraform'
-alias dm='c ~/Programs/dwm-6.2/'
 alias w='which'
 alias ac='arp -a'
 alias as='arp-scan'
@@ -20,7 +18,7 @@ alias lt='litecli'
 alias kc='killall chromium'
 alias pup='pup -c'
 alias cal='calcurse'
-alias top='bpytop'
+alias top='bptop'
 alias sl='c ~/n0koSuckless/slstatus'
 alias vbox='virtualbox'
 alias vr='virsh'
@@ -75,13 +73,15 @@ alias md='mkdir'
 alias makeit='makepkg -si'
 alias s='surfraw'
 alias n0='c ~/n0koSuckless/n0koBuild/'
-alias n1='c ~/n0koSuckless/dmenu-5.0/'
+alias dm='c ~/n0koSuckless/dmenu-5.0/'
 alias f='fzf'
 alias test='while sleep 2; do ping archlinux.org; done'
 alias ns='notify-send hello'
 alias nsc='notify-send -u critical hello'
 alias gp='rg'
 alias repo='c ~/capacity/repos/'
+
+
 alias vpn='openvpn3 session-start --background --config ~/.pass/client.ovpn'
 alias vpns='openvpn3 sessions-list'
 
@@ -101,6 +101,10 @@ function move(){
     disown back
 } 
 
+function nsx(){
+    nsxiv $@ &
+    disown nsxiv
+} 
 function man() {
   /usr/bin/man $* | \
     col -b | \
