@@ -86,7 +86,7 @@ function addpolicy(){
     aws iam put-group-policy --group-name $1 --policy-document $2 --policy-name $3
 }
 function addpolicyh(){
-    echo "group-name, policy-document, policy-name"
+    echo "group-name, policy-document, policy-name\n HINT: use 'file://' if the policy is too large!"
 }
 
 
