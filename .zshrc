@@ -53,8 +53,8 @@ eval "$(pyenv init -)"
 kitty + complete setup zsh | source /dev/stdin
 
 alias path='echo -e ${PATH//:/\\n}'
-alias evil='airmon-ng start wlp5s0mon'
-alias evilt='airmon-ng --test wlp5s0mon'
+alias evil='airmon-ng start wlan0'
+alias evilt='airmon-ng --test wlan0'
 alias ns='notify-send hello'
 alias nsc='notify-send -u critical hello'
 

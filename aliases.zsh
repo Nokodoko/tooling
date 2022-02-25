@@ -36,7 +36,6 @@ alias sx='startx'
 alias ddwm='cd ~/Programs/dwm/ && gs'
 alias vb='nvim ~/.zshrc'
 alias e='exit'
-alias sb='source ~/.zshrc'
 alias dunstrc='nvim ~/.config/dunst/dunstrc'
 alias plug='cd ~/.config/nvimBak/plugged && gs'
 alias v='nvim'
@@ -114,4 +113,9 @@ function man() {
 function mkn(){
     mknod /dev/$1 $2 $3 $4
     cd $1
+}
+
+function sb(){
+    cat ~/.zshrc > ~/.zsh/tooling/.zshrc
+    source ~/.zshrc
 }
