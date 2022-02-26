@@ -80,6 +80,7 @@ alias nsc='notify-send -u critical hello'
 alias gp='rg'
 alias repo='c ~/capacity/repos/'
 alias um='sudo umount -R /mnt'
+alias cmnt='c /mnt/'
 
 
 alias vpn='openvpn3 session-start --background --config ~/.pass/client.ovpn'
