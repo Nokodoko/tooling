@@ -123,5 +123,5 @@ function sb(){
 }
 
 function mnt() {
-    sudo mount $1 /mnt
+    sudo mount $@ /mnt
 }
