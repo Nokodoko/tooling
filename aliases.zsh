@@ -121,3 +121,7 @@ function sb(){
     cat ~/.zshrc > ~/.zsh/tooling/.zshrc
     source ~/.zshrc
 }
+
+function mnt() {
+    sudo mount /dev/$1 /mnt
+}
