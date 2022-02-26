@@ -44,8 +44,8 @@ function os() {
 }
 
 #------YOUTUBE-DL------#
-alias yt='yt-dlp'
-alias yv='youtube-viewer'
+alias ytd='yt-dlp'
+alias yt='ytfzf'
 
 #------UDEMY-DL------#
 function ud(){
