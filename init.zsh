@@ -5,4 +5,5 @@ function awsinit(){
 }
 function awsoff(){
     sed -i 's-source ~/.zsh/tooling/aws.zsh-#aws.zsh-' ~/.zshrc
+    source ~/.zshrc
 }
