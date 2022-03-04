@@ -44,6 +44,7 @@ alias goclass='c ~/Videos/Udemy/Go/learn-how-to-code/'
 alias pprof='go tool pprof'
 alias gu='c ~/goUltimate v main.go'
 alias hack='c ~/programming/hack/'
+alias api='c ~/programming/apiClass/'
 
 #configs
 alias zconf='c ~/.zsh/tooling/'
