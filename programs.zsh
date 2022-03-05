@@ -2,6 +2,7 @@
 alias mu='mupdf'
 alias mail='neomutt'
 alias mp='mplayer'
+alias trace='traceroute'
 
 #------FUNCTIONS------#
 function m(){
