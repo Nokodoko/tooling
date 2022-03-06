@@ -3,6 +3,7 @@ alias mu='mupdf'
 alias mail='neomutt'
 alias mp='mplayer'
 alias trace='traceroute'
+alias q86='qemu-system-x86_64 -hda'
 
 #------FUNCTIONS------#
 function m(){
