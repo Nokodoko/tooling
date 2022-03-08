@@ -47,6 +47,7 @@ function os() {
 
 #------YOUTUBE-DL------#
 alias ytd='yt-dlp'
+
 function yt() {
     ytfzf $@ & disown mpv
 }
