@@ -47,7 +47,9 @@ function os() {
 
 #------YOUTUBE-DL------#
 alias ytd='yt-dlp'
-alias yt='ytfzf'
+function yt() {
+    ytfzf $@ & disown mpv
+}
 
 #------UDEMY-DL------#
 function ud(){
