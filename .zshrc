@@ -17,7 +17,7 @@ cowsay -f bunny "n0ko"
 #------SOURCING------#
 source ~/Programs/kube-ps1/kube-ps1.sh
 source ~/.zsh/tooling/aliases.zsh
-#aws.zsh
+source ~/.zsh/tooling/aws.zsh
 source ~/.zsh/tooling/c.zsh
 source ~/.zsh/tooling/colorls.zsh
 source ~/.zsh/tooling/directories.zsh

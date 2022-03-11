@@ -1,4 +1,4 @@
-alias kctx='kubectx'
+alias kx='kubectx'
 alias kstage='kubectx staging'
 alias kstagef='kubectx staging-fuji'
 alias kserv='kubectx services'
