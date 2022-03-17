@@ -6,3 +6,6 @@ alias kprod='kubectx production'
 alias kgn='kubectl get nodes -o wide'
 alias kgp='kubectl get pods -o wide'
 alias kns='kubens'
+function kpf() {
+    kubectl port-forward $1 $2
+}
