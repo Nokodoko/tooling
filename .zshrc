@@ -38,6 +38,7 @@ source ~/.zsh/tooling/systemd.zsh
 source ~/.zsh/tooling/terraform.zsh
 source ~/.zsh/tooling/xserver.zsh
 source ~/.zsh/tooling/init.zsh
+source ~/.zsh/tooling/ansible.zsh
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
