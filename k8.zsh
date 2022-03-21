@@ -1,3 +1,4 @@
+alias k='kubectl'
 alias kx='kubectx'
 alias kstage='kubectx staging'
 alias kstagef='kubectx staging-fuji'
