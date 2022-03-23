@@ -58,7 +58,7 @@ kitty + complete setup zsh | source /dev/stdin
 alias path='echo -e ${PATH//:/\\n}'
 alias evil='airmon-ng start wlan0'
 alias evilt='airmon-ng --test wlan0'
-alias ns='notify-send hello'
+alias ns='notify-send'
 alias nsc='notify-send -u critical hello'
 
 #Functions
