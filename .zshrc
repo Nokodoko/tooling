@@ -17,7 +17,7 @@ cowsay -f bunny "n0ko"
 #------SOURCING------#
 source ~/Programs/kube-ps1/kube-ps1.sh
 source ~/.zsh/tooling/aliases.zsh
-source ~/.zsh/tooling/aws.zsh
+#aws.zsh
 source ~/.zsh/tooling/c.zsh
 source ~/.zsh/tooling/colorls.zsh
 source ~/.zsh/tooling/directories.zsh
@@ -40,6 +40,7 @@ source ~/.zsh/tooling/xserver.zsh
 source ~/.zsh/tooling/init.zsh
 source ~/.zsh/tooling/ansible.zsh
 source ~/.zsh/tooling/ip.zsh
+source ~/.zsh/tooling/capacity.zsh
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
