@@ -5,6 +5,8 @@ export PATH=/usr/sbin/aws_completer:$PATH
 alias awws='aws-mfa --device arn:aws:iam::632808888887:mfa/chris.montgomery --duration 86400'
 alias paws='aws-mfa --device arn:aws:iam::591885507682:mfa/cMonty614 --profile cMonty614 --duration 86400'
 
+alias awsh='cat ~/.zsh/tooling/aws.zsh'
+
 #reset user-password
 function resetpass() {
     genPass > newpass.txt; 
