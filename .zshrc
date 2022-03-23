@@ -64,7 +64,7 @@ alias nsc='notify-send -u critical hello'
 #Functions
 function chx(){
     #sudo chmod +x $1 && sudo cp $1 /usr/local/bin/
-    sudo chmod +x $1 
+    chmod +x $1 
 }
 
 function p(){
