@@ -17,7 +17,7 @@ alias gstatf='git status | fzf'
 alias gadd='git add'
 alias ga='git add --all'
 alias gl='git log'
-alias gpush='git push'
+#alias gpush='git push --set-upstream origin'
 alias gcout='git checkout'
 alias gcheck='git checkout -b'
 alias gbranch='git branch'
@@ -29,3 +29,6 @@ function gremote(){
     git remote add origin git@github.com:Nokodoko/$1.git
 }
 
+function gpush() {
+    git push --set-upstream origin $1
+}
