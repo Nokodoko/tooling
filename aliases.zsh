@@ -115,8 +115,8 @@ function mkn(){
 }
 
 function sb(){
-    cat ~/.zshrc > ~/.zsh/tooling/.zshrc
-    source ~/.zshrc
+    cat ~/.zshenv > ~/.zsh/tooling/zshenv
+    source ~/.zshenv
 }
 
 function mnt() {
