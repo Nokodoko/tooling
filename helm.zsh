@@ -1,4 +1,4 @@
-alias helmh='cat ~/.zsh/tooling/helm.zsh'
+alias hh='cat ~/.zsh/tooling/helm.zsh'
 alias h='helm'
 alias hsh='helm search hub'
 alias hsr='helm search repo'
