@@ -1,0 +1,3 @@
+function hadd() {
+    helm repo add $1 https://charts.$1.com/$1
+}

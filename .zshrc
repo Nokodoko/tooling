@@ -8,11 +8,11 @@ bindkey -M vicmd v edit-command-line
 fpath=(~/.zsh/completion $fpath)
 set -o vi
 
-#pfetch
-#export PF_COL1=4
-#export P4_COL2=5
-#export PF_COL3=5
-cowsay -f bunny "n0ko"
+pfetch | lolcat
+export PF_COL1=4
+export P4_COL2=5
+export PF_COL3=5
+#cowsay -f bunny "n0ko"
 
 #------SOURCING------#
 source ~/Programs/kube-ps1/kube-ps1.sh
@@ -41,6 +41,7 @@ source ~/.zsh/tooling/init.zsh
 source ~/.zsh/tooling/ansible.zsh
 source ~/.zsh/tooling/ip.zsh
 source ~/.zsh/tooling/capacity.zsh
+source ~/.zsh/tooling/helm.zsh
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
