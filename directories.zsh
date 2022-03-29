@@ -34,6 +34,7 @@ alias plug='c ~/.local/share/nvim/site/pack/packer/start/'
 alias sv='sudo nvim'
 alias swapped='rm ~/.local/share/nvim/swap//%home%n0ko%.config%nvim%init.vim.swp'
 alias swap='rm ~/.local/share/nvim/swap//%home%n0ko%.zsh.swp'
+alias playbook='c ~/playbooks/'
 
 #golang
 alias alg='c ~/algorithmswithgo.com/module01 &&'
