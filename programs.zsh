@@ -4,7 +4,7 @@ alias mail='neomutt'
 alias mp='mplayer'
 alias trace='traceroute'
 alias q86='qemu-system-x86_64 -hda'
-alias='btop --utf-force'
+alias btop='btop --utf-force'
 
 #------FUNCTIONS------#
 function m(){
