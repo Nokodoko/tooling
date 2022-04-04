@@ -62,5 +62,5 @@ function ud2(){
 
 #-----loop-----#
 function loop() {
-    while sleep $1; do $@; done
+    while sleep 2; do $@; done
 }
