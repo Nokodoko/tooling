@@ -42,6 +42,8 @@ source ~/.zsh/tooling/ansible.zsh
 source ~/.zsh/tooling/ip.zsh
 source ~/.zsh/tooling/capacity.zsh
 source ~/.zsh/tooling/helm.zsh
+source ~/.zsh/tooling/tmux.zsh
+#fzf
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
