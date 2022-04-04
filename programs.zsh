@@ -59,3 +59,8 @@ function ud(){
 function ud2(){
     python ~/Programs/udemy-dl/udemy-dl.py $1 -k ~/Programs/udemy-dl/cookie2.txt
 }
+
+#-----loop-----#
+function loop() {
+    while sleep $1; do $2; done
+}
