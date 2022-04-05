@@ -6,6 +6,7 @@ alias trace='traceroute'
 alias q86='qemu-system-x86_64 -hda'
 alias btop='btop --utf-force'
 alias t='tmux'
+alias clip='xclip -sel c'
 
 #------FUNCTIONS------#
 function m(){
