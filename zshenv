@@ -43,6 +43,7 @@ source ~/.zsh/tooling/ip.zsh
 source ~/.zsh/tooling/capacity.zsh
 source ~/.zsh/tooling/helm.zsh
 source ~/.zsh/tooling/tmux.zsh
+source ~/.zsh/tooling/bindings.zsh
 #fzf
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
