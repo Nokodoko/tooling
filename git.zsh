@@ -32,3 +32,7 @@ function gremote(){
 function gpush() {
     git push --set-upstream origin $1
 }
+
+function gco() {
+    git checkout -b $1
+}
