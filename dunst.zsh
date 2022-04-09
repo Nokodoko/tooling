@@ -1,6 +1,6 @@
 alias d='dunstctl'
 alias dhp='dunstctl history-pop'
-function drestart() {
+function dtest() {
     pidof dunst && killall dunst
     dunst &
 }
