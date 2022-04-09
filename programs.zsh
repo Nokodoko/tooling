@@ -67,8 +67,3 @@ function loop() {
     while sleep 2; do $@; done
 }
 
-#refresh dunst
-function rdunst() {
-    killall dunst
-    dunst -config ~/.config/dunst/dunstrc &
-}
