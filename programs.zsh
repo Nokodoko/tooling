@@ -8,6 +8,7 @@ alias btop='btop --utf-force'
 alias t='tmux'
 alias clip='xclip -sel c'
 alias dmenu='dmenu -m 0 -fn VictorMono:size=20 -nf green -nb black -nf green -sb blue'
+alias gcu='google-chrome-unstable'
 
 #------FUNCTIONS------#
 function m(){
