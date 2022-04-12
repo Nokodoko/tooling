@@ -2,7 +2,7 @@ export TERM="rxvt-256color"
 export COLORTERM='rxvt-unicode-256color'
 export EDITOR='nvim'
 export KUBE_EDITOR='nvim'
-export BROWSER='qutebrowser'
+export BROWSER='/usr/sbin/google-chrome'
 export TERMINAL='kitty'
 export MANPAGER="nvim -c 'set ft=man' -"
 export LYNX_CFG='~/.config/lynx/lynx.cfg'
