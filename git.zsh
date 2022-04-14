@@ -36,3 +36,6 @@ function gpush() {
 function gco() {
     git checkout -b $1
 }
+function gcco() {
+    git checkout $1
+}
