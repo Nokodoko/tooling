@@ -52,6 +52,7 @@ function os() {
 
 #------YOUTUBE-DL------#
 alias ytd='yt-dlp'
+alias mus='yt-dlp -x'
 alias yt='ytfzf'
 
 #------UDEMY-DL------#
