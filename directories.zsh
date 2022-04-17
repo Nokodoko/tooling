@@ -13,6 +13,7 @@ alias manual='c ~/manuals/'
 
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
+alias spells='c ~/scripts'
 
 #credentials
 alias aconf='v ~/.aws/credentials'
