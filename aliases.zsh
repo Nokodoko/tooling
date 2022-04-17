@@ -32,7 +32,6 @@ alias -s {html,go,css}=nvim
 alias see='kitty icat'
 alias cat='bat'
 alias ccat='/bin/cat'
-alias sx='startx'
 alias ddwm='cd ~/Programs/dwm/ && gs'
 alias vb='nvim ~/.zshenv'
 alias e='exit'
