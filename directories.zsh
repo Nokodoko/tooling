@@ -51,7 +51,7 @@ alias api='c ~/programming/apiClass/'
 #configs
 alias zconf='c ~/.zsh/tooling/'
 alias vconf='c ~/.config/nvim/lua/n0ko/'
-alias vconf='v ~/.config/nvim/lua/init.lua'
+alias vv='v ~/.config/nvim/lua/init.lua'
 alias mconf='v ~/.config/neomutt/neomuttrc'
 alias conf='c ~/.config'
 alias vimrc='v ~/.config/nvim/init.vim'
