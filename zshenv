@@ -85,3 +85,10 @@ function get-source() {
 }
 
 bindkey '^ ' forward-word
+
+
+
+
+
+
+
