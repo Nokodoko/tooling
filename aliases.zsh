@@ -78,6 +78,7 @@ alias gp='rg'
 alias repo='c ~/capacity/repos/'
 alias um='sudo umount -R /mnt'
 alias cmnt='c /mnt/'
+alias socket='zmodload zsh/net/tcp'
 
 
 alias vpn='openvpn3 session-start --background --config ~/.pass/client.ovpn'
