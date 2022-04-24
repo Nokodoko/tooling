@@ -4,6 +4,6 @@ alias dfy='dunstify'
 function dtest() {
     pidof dunst && killall dunst
     dunst &
-    ns hi
+    dfy -u low "hi"
 }
 
