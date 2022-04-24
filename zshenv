@@ -99,3 +99,5 @@ bindkey '^ ' forward-word
 
 
 
+
+
