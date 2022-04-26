@@ -21,6 +21,7 @@ alias gl='git log'
 alias gcout='git checkout'
 alias gcheck='git checkout -b'
 alias gbranch='git branch'
+alias gdelete='git branch -D'
 alias iv='sxiv' 
 alias reset='make clean && rm -f config.h && git reset --hard origin/master'
 
