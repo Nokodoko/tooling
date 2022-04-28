@@ -15,6 +15,9 @@ alias manual='c ~/manuals/'
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
 alias spell='c ~/scripts'
 
+#dunst
+alias dmagic='c ~/scripts/dunstMagic/'
+
 #credentials
 alias aconf='v ~/.aws/credentials'
 
