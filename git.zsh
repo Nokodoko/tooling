@@ -9,7 +9,7 @@ alias gI='gitInit'
 alias gi='gitinit'
 alias gcom='git commit -m'
 alias gcomx='git commit -am'
-alias gd='git difftool'
+#alias gd='git difftool'
 alias gdiff='git diff'
 alias gdh='git difftool HEAD'
 alias gs='colorls --git-status'
@@ -21,11 +21,20 @@ alias gl='git log'
 alias gcout='git checkout'
 alias gcheck='git checkout -b'
 alias gbranch='git branch'
-alias gdelete='git branch -D'
+alias gd='git branch -D $(git branch)'
+alias gd='git branch -D'
 alias iv='sxiv' 
 alias reset='make clean && rm -f config.h && git reset --hard origin/master'
 
 #------FUNCTIONS------#
+#function gbranch() {
+#    git checkout $(git branch | fzf)
+#}
+
+function gdel() {
+    git branch -d $(git branch | fzf)
+}
+
 function gremote(){
     git remote add origin git@github.com:Nokodoko/$1.git
 }

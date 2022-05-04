@@ -13,7 +13,11 @@ alias manual='c ~/manuals/'
 
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
-alias spell='c ~/scripts'
+#alias spell='c ~/scripts'
+
+function spell() {
+    v ~/scripts/$(c ~/scripts/ | awk '{print $2}' | fzf)
+}
 
 #dunst
 alias dmagic='c ~/scripts/dunstMagic/'
@@ -27,6 +31,9 @@ alias lsp='c /home/n0ko/.local/share/nvim/lsp_servers/'
 alias lspconfig='c /home/n0ko/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua/lspconfig/server_configurations'
 
 #Capacity
+function cf() {
+    v $(fd -d9 -tf yaml ~/capacity/repos/dev/ | fzf)
+}
 alias repo='c ~/capacity/repos/'
 alias dev='c ~/capacity/repos/dev/'
 alias ops='c ~/capacity/repos/dev/ops/'
@@ -52,8 +59,17 @@ alias hack='c ~/programming/hack/'
 alias api='c ~/programming/apiClass/'
 
 #configs
-alias zconf='c ~/.zsh/tooling/'
-alias vconf='c ~/.config/nvim/lua/n0ko/'
+function zconf() {
+    v ~/.zsh/tooling/$(cd .zsh/tooling && exa | fzf)
+}
+function vconf() {
+    v ~/.config/nvim/lua/n0ko/$(cd ~/.config/nvim/lua/n0ko/ && exa | fzf)
+}
+function bs() {
+    v ~/capacity/repos/scripts/bin/$(cd ~/capacity/repos/scripts/bin && exa | fzf)
+}
+
+#alias vconf='c ~/.config/nvim/lua/n0ko/'
 alias vv='v ~/.config/nvim/init.lua'
 alias mconf='v ~/.config/neomutt/neomuttrc'
 alias conf='c ~/.config'
