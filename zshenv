@@ -8,7 +8,7 @@ bindkey -M vicmd v edit-command-line
 fpath=(~/.zsh/completion $fpath)
 set -o vi
 
-pfetch | lolcat
+bunnyfetch | lolcat
 export PF_COL1=4
 export P4_COL2=5
 export PF_COL3=5
@@ -17,7 +17,7 @@ export PF_COL3=5
 #------SOURCING------#
 #source ~/Programs/kube-ps1/kube-ps1.sh
 source ~/.zsh/tooling/aliases.zsh
-#aws.zsh
+source ~/.zsh/tooling/aws.zsh
 source ~/.zsh/tooling/c.zsh
 source ~/.zsh/tooling/colorls.zsh
 source ~/.zsh/tooling/directories.zsh
@@ -86,16 +86,7 @@ function get-source() {
 
 bindkey '^ ' forward-word
 
-
-
-
-
-
-
-
-
-
-
+. "$HOME/.cargo/env"
 
 
 
