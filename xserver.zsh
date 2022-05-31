@@ -4,8 +4,11 @@ alias pi='v ~/.config/.picom.conf'
 #-----Xresources-----#
 alias xre='v ~/.Xresources'
 alias change='xrdb ~/.Xresources'
+
 #-----Start Xserver Plus keyboard-----#
-alias sx='sx.sh'
+alias sx='startx'
+
+alias ssx='~/scripts/startX.sh'
 
 #------XDG------#
 alias xds='xdg-settings'

@@ -52,7 +52,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/Programs/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #-----paths-----#
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:~/go/src/scripts:~/go/bin:~/proto/prac2/:/usr/local/bin/rofi-surfraw:/usr/lib/surfraw:~/.config/lynx/lynx.cfg:${PATH}:~/Videos/Udemy/shellScripting/shellclass/localusers/:~/.gem/ruby/3.0.0/bin/:~/capacity/repos/scripts/bin/:~/capacity/repos/helpers:~/aws:~/.cargo/bin/:/usr/sbin/pyenv:~/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/:/home/n0ko/.local/share/nvim/lsp_servers/pylsp/venv/bin:/home/n0ko/.local/lib/python3.10/site-packages:/home/n0ko/.local/share/nvim/lsp_servers/bash/:~/.local/bin/:/home/n0ko/scripts/
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:~/go/src/scripts:~/go/bin:~/proto/prac2/:/usr/local/bin/rofi-surfraw:/usr/lib/surfraw:~/.config/lynx/lynx.cfg:${PATH}:~/Videos/Udemy/shellScripting/shellclass/localusers/:~/.gem/ruby/3.0.0/bin/:~/capacity/repos/scripts/bin/:~/capacity/repos/helpers:~/aws:~/.cargo/bin/:/usr/sbin/pyenv:~/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/:/home/n0ko/.local/share/nvim/lsp_servers/pylsp/venv/bin:/home/n0ko/.local/lib/python3.10/site-packages:/home/n0ko/.local/share/nvim/lsp_servers/bash/:~/.local/bin/:/home/n0ko/scripts/:/home/n0ko/.local/share/nvim/lsp_servers/terraform/terraform-ls::/home/n0ko/.local/share/nvim/lsp_servers/efm/efm-langserver
 export GOPATH=~/go/:~/programming/go/:~/goProjects/:~/compSci/:~/ardProject/:~/aws
 
 eval "$(pyenv init --path)"
@@ -87,8 +87,3 @@ function get-source() {
 bindkey '^ ' forward-word
 
 . "$HOME/.cargo/env"
-
-
-
-
-

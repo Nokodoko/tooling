@@ -22,6 +22,13 @@ alias awsid='aws sts get-caller-identity'
 alias lsec2c='awsc ec2 describe-instances --filters "Name=instance-type,Values=t2.micro" --query "Reservations[].Instances[].InstanceId"'
 alias lsec2='aws ec2 describe-instances --filters "Name=instance-type,Values=t2.micro" --query "Reservations[].Instances[].InstanceId"'
 
+function ec2() {
+    aws ec2 describe-instances | gp -B110 -i $1
+}
+
+function ec2ip() {
+    aws ec2 describe-instances | gp -B110 -i $1 | gp -i ip
+}
 #list ami-IDs (unfinished!!)
 function lsami() {
     aws$1 ec2 describe-instances | gp -i imageid | cut -d: -f2| sed 's/"//g' | sed 's/,//'
@@ -59,7 +66,7 @@ function addgroup(){
     aws iam create-group --group-name $@
 }
 
-function deletegroup(){
+function dnlp-design-sandoxnlp-design-sandoxeletegroup(){
     aws iam delete-group --group-name $@
 }
 
