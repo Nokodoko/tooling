@@ -2,7 +2,16 @@
 alias repo='c ~/capacity/repos/'
 alias dev='c ~/capacity/repos/dev/'
 alias ops='c ~/capacity/repos/dev/ops/'
-alias serv='c ~/capacity/repos/dev/services'
+alias services='c ~/capacity/repos/dev/services'
+basedir='~/capacity/repos/dev/'
+
+function serv() {
+    v $(cd ~/capacity/repos/dev/services && fzf)
+}
+
+function cf() {
+    v $(fd -d9 -tf yaml ~/capacity/repos/dev/ | fzf)
+}
 
 function ops() {
     v $(fd -d5 -tf tf ~/capacity/repos/dev/ops | fzf)
