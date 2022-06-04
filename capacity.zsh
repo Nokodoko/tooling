@@ -3,10 +3,26 @@ alias repo='c ~/capacity/repos/'
 alias dev='c ~/capacity/repos/dev/'
 alias ops='c ~/capacity/repos/dev/ops/'
 alias serv='c ~/capacity/repos/dev/services'
+
+function ops() {
+    v $(fd -d5 -tf tf ~/capacity/repos/dev/ops | fzf)
+}
 #alias apps='c ~/capacity/repos/dev/services/apps/'
 function apps() {
-    v ~/capacity/repos/dev/services/apps/$(cd ~/capacity/repo/dev/services/apps/ && exa | fzf)
+    v $(fd -tf yaml -d9 --full-path ~/capacity/repos/dev | fzf)
 }
+##
+##function ops() {
+##    v $(fd -tf yaml -d9 --full-path ~/capacity/repos/dev | fzf)
+##}
+##
+##function serv() {
+##    v $(fd -tf yaml -d9 --full-path ~/capacity/repos/dev | fzf)
+##}
+##
+##function dev() {
+##    v $(fd -tf yaml -d9 --full-path ~/capacity/repos/dev | fzf)
+##}
 alias bi='c ~/capacity/repos/dev/services/bi/'
 alias ai='c ~/capacity/repos/dev/services/ai/'
 alias rangers='c ~/capacity/repos/dev/services/dataRangers/'

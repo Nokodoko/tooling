@@ -30,15 +30,6 @@ alias fonts='c /usr/share/fonts/'
 alias lsp='c /home/n0ko/.local/share/nvim/lsp_servers/'
 alias lspconfig='c /home/n0ko/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua/lspconfig/server_configurations'
 
-#Capacity
-function cf() {
-    v $(fd -d9 -tf yaml ~/capacity/repos/dev/ | fzf)
-}
-alias repo='c ~/capacity/repos/'
-alias dev='c ~/capacity/repos/dev/'
-alias ops='c ~/capacity/repos/dev/ops/'
-alias serv='c ~/capacity/repos/dev/services'
-
 #nvim directories
 alias plug='c ~/.local/share/nvim/site/pack/packer/start/'
 alias plug='c ~/.local/share/nvim/site/pack/packer/start/'
