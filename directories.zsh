@@ -60,7 +60,7 @@ alias api='c ~/programming/apiClass/'
 
 #configs
 function zconf() {
-    v ~/.zsh/tooling/$(cd .zsh/tooling && exa | fzf)
+    v ~/.zsh/tooling/$(cd ~/.zsh/tooling && exa | fzf)
 }
 function vconf() {
     v ~/.config/nvim/lua/n0ko/$(cd ~/.config/nvim/lua/n0ko/ && exa | fzf)
