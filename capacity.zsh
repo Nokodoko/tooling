@@ -6,7 +6,7 @@ alias services='c ~/capacity/repos/dev/services'
 basedir='~/capacity/repos/dev/'
 
 function serv() {
-    v $(cd ~/capacity/repos/dev/services && fzf)
+    v $(cd ~/capacity/repos/dev/services && fzf) | v
 }
 
 function cf() {
