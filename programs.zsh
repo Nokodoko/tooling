@@ -7,7 +7,7 @@ alias q86='qemu-system-x86_64 -hda'
 alias btop='btop --utf-force'
 alias t='tmux'
 alias clip='xclip -sel c'
-alias dmenu='dmenu -m 0 -fn VictorMono:size=20 -nf cyan -nb black -nf cyan -sb black'
+alias dmenu='dmenu -m 0 -fn VictorMono:size=11 -nf cyan -nb black -nf cyan -sb black'
 alias gcu='google-chrome-unstable'
 
 #------FUNCTIONS------#
