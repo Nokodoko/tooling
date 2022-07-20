@@ -20,3 +20,15 @@ function tfav(){
 function tfdv(){
     TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform destroy -lock=false -var-file $1 -auto-approve
 } 
+
+alias tfpt(){
+    TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform plan -target=$1
+}
+
+alias tfat(){
+    TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply -target=$1
+}
+
+alias tfaat(){
+    TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply -auto-approve -target=$1
+}

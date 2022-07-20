@@ -10,6 +10,7 @@ alias mit='c ~/MIT'
 alias music='c ~/music'
 alias ws='wiki-search'
 alias manual='c ~/manuals/'
+alias mirrors='sudo v /etc/pacman.d/mirrorlist'
 
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
