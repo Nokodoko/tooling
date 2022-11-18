@@ -46,6 +46,7 @@ source ~/.zsh/tooling/tmux.zsh
 source ~/.zsh/tooling/bindings.zsh
 source ~/.zsh/tooling/dunst.zsh
 source ~/.zsh/tooling/keyboards.zsh
+source ~/.zsh/tooling/mount.zsh
 #fzf
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
@@ -88,6 +89,12 @@ function get-source() {
 bindkey '^ ' forward-word
 . /opt/asdf-vm/asdf.sh
 . "$HOME/.cargo/env"
+
+
+
+
+
+
 
 
 

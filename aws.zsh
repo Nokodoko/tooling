@@ -15,6 +15,7 @@ alias awsresetPass='~/scripts/awsResetPass.zsh'
 #check caller
 alias awsid='aws sts get-caller-identity'
 
+######EC2######
 #list ec2 instances (per profile)
 alias lsec2c='awsc ec2 describe-instances --filters "Name=instance-type,Values=t2.micro" --query "Reservations[].Instances[].InstanceId"'
 alias lsec2='aws ec2 describe-instances --filters "Name=instance-type,Values=t2.micro" --query "Reservations[].Instances[].InstanceId"'
@@ -59,6 +60,7 @@ function addgrouph(){
     echo "group-name"
 }
 
+#####IAM#####
 function addgroup(){
     aws iam create-group --group-name $@
 }
@@ -103,6 +105,8 @@ function addpolicyh(){
     echo "group-name, policy-document, policy-name\n HINT: use 'file://<fileName>' if the policy is too large!"
 }
 
+#####ECR#####
+alias ecrRepos='~/scripts/ecrRepos.sh'
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
