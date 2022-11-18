@@ -19,14 +19,27 @@ function hget () {
     helm get $(cat ~/helmInfo/helmSpeed.md | awk {'print $1'} | fzf)
 }
 
-function hstatus () {
+function hstat() {
     helm status $(cat ~/helmInfo/helmSpeed.md | awk {'print $1'} | fzf)
+}
+
+function hstats() {
+    helm status $(cat ~/helmInfo/servSpeed.md | awk {'print $1'} | fzf)
 }
 
 function hls() {
     cat ~/helmInfo/helmSpeed.md
 }
 
-#function hup() {
-#    helm upgrade --install  
-#}
+function hlss() {
+    cat ~/helmInfo/servSpeed.md
+}
+
+function hup() {
+    helm secrets upgrade --install --namespace $(cat ~/helmInfo/helmUpdate.md | fzf | awk '{print $2, $1}') . -f $@
+}
+
+
+function hups() {
+    helm secrets upgrade --install --namespace $(cat ~/helmInfo/servSpeed.md | fzf | awk '{print $2, $1}') . -f $@
+}

@@ -1,9 +1,10 @@
 #------DOCKER------#
 alias d='docker'
 alias dstop='docker stop'
-alias dr='docker run -dit'
-alias drun='docker run --rm'
 alias drun='~/scripts/drun.sh'
+alias drunrm='~/scripts/drunrm.sh'
+alias dexec='~/scripts/dexec.sh'
+alias drm='~/scripts/drm.sh'
 alias ds='docker stop'
 alias darch='docker run -dit archlinux/base'
 alias dp='docker ps'
@@ -17,8 +18,6 @@ alias dh='docker history'
 alias dt='docker tag'
 alias dbt='docker build -t'
 alias db='docker build .'
-alias drmi='docker rmi -f'
-alias drm='docker rm'
 alias dprune='docker image prune'
 alias dsysp='docker system prune -a'
 alias dlog='~/scripts/dlog.sh'
@@ -86,12 +85,12 @@ function dshell() { # $1=name; $2=image; $3=shell interpreter
         docker run -it --name $1 $2 $3
         } 
 
-function dexec() { # $1=shell interpreter
-        dp > ~/running_containers
-        local ID=$(awk 'FNR == 2 {print $1}' ~/running_containers) # ID = Container hash
-        docker exec -it $ID $1 
-        rm ~/running_containers
-        } 
+#function dexec() { # $1=shell interpreter
+#        dp > ~/running_containers
+#        local ID=$(awk 'FNR == 2 {print $1}' ~/running_containers) # ID = Container hash
+#        docker exec -it $ID $1 
+#        rm ~/running_containers
+#        } 
 
 function dbuild() { # $1=
         docker build -t n0ko/$1 -f Dockerfile .

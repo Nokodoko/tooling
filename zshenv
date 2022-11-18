@@ -32,7 +32,7 @@ source ~/.zsh/tooling/lsp.zsh
 source ~/.zsh/tooling/npm.zsh
 source ~/.zsh/tooling/pacman.zsh
 source ~/.zsh/tooling/programs.zsh
-source ~/.zsh/tooling/ssh.zsh
+source ~/.zsh/exports/ssh.zsh
 source ~/.zsh/tooling/starship.zsh
 source ~/.zsh/tooling/systemd.zsh
 source ~/.zsh/tooling/terraform.zsh
@@ -40,7 +40,7 @@ source ~/.zsh/tooling/xserver.zsh
 source ~/.zsh/tooling/init.zsh
 source ~/.zsh/tooling/ansible.zsh
 source ~/.zsh/tooling/ip.zsh
-source ~/.zsh/tooling/capacity.zsh
+source ~/.zsh/exports/capacity.zsh
 source ~/.zsh/tooling/helm.zsh
 source ~/.zsh/tooling/tmux.zsh
 source ~/.zsh/tooling/bindings.zsh
@@ -88,18 +88,6 @@ function get-source() {
 bindkey '^ ' forward-word
 . /opt/asdf-vm/asdf.sh
 . "$HOME/.cargo/env"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
