@@ -1,5 +1,6 @@
 #aws-completion
-export PATH=/usr/sbin/aws_completer:$PATH
+export PATH=/local/bin/:$PATH
+export AWS_CLI_AUTO_PROMPT=on-partial
 
 alias awsh='cat ~/.zsh/tooling/aws.zsh'
 alias awslsUsers='~/scripts/awsListUsers.sh'
@@ -110,4 +111,4 @@ alias ecrRepos='~/scripts/ecrRepos.sh'
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
-complete -C '/usr/sbin/aws_completer' aws
+complete -C '/usr/local/bin/aws_completer' aws

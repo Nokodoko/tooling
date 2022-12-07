@@ -12,6 +12,7 @@ alias ws='wiki-search'
 alias manual='c ~/manuals/'
 alias mirrors='sudo v /etc/pacman.d/mirrorlist'
 alias tool='c ~/.zsh/tooling/'
+alias exp='c ~/.zsh/exports/'
 
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
@@ -40,6 +41,8 @@ alias swapped='rm ~/.local/share/nvim/swap//%home%n0ko%.config%nvim%init.vim.swp
 alias swap='rm ~/.local/share/nvim/swap//%home%n0ko%.zsh.swp'
 alias playbook='c ~/playbooks/'
 
+#hosts
+alias hosts='v /etc/hosts'
 #golang
 alias alg='c ~/algorithmswithgo.com/module01 &&'
 alias play='c ~/goPlay'
@@ -57,6 +60,9 @@ function zconf() {
 }
 function vconf() {
     v ~/.config/nvim/lua/n0ko/$(cd ~/.config/nvim/lua/n0ko/ && exa | fzf)
+}
+function exconf() {
+    v ~/.zsh/exports/$(cd ~/.zsh/exports && exa | fzf)
 }
 function bs() {
     v ~/capacity/repos/scripts/bin/$(cd ~/capacity/repos/scripts/bin && exa | fzf)

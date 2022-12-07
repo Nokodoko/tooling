@@ -1,17 +1,16 @@
+# vim:foldmethod=marker
 #------SYSTEMD------#
-alias order66='sudo systemctl stop'
-alias dewit='sudo systemctl enable'
-alias dewitnow='sudo systemctl start'
-alias journal='journalctl -xe'
+alias stop='sudo systemctl stop'
+alias auto='sudo systemctl enable'
+alias start='sudo systemctl start'
+alias restart='sudo systemctl restart'
 alias reload='sudo systemctl daemon-reload'
-alias wiservoff='sudo ip link set wlan0 down'
-#alias wiservon='sudo ip link set wlan0 up'
-alias wiservon='sudo systemctl start netctl'
-alias eth='sudo systemctl start dhcpcd'
-alias etho='sudo systemctl stop dhcpcd'
 alias sys='sudo systemctl'
-alias sys_s='systemctl status'
-alias sys_start='systemctl start'
+alias status='systemctl status'
+
+#-----LOGGING-----#
+ALIAS JOURNAL='JOURNALCTL -XE'
+ALIAS VAC='JOURNALCTL --VACUUM-TIME=5D'
 
 #------NETCTL------#
 alias wifi='sudo netctl start'
@@ -26,6 +25,16 @@ alias northere='sudo netctl stop Verizon-Mifi8800L-43B4'
 alias why='sudo wifi-menu'
 alias air='aircrack-ng'
 alias blue='bluetoothctl'
+
+#-----NETWORKING-----#
+ALIAS WIOFF='SUDO IP LINK SET WLAN0 DOWN'
+ALIAS WION='SUDO IP LINK SET WLAN0 UP'
+ALIAS ETHOFF='SUDO SYSTEMCTL STOP DHCPCD'
+ALIAS ETHON='SUDO SYSTEMCTL START DHCPCD '
+ALIAS NETCTLOFF='SUDO SYSTEMCTL STOP NETCTL'
+ALIAS NETCTLON='SUDO SYSTEMCTL START NETCTL'
+ALIAS ETH='SUDO SYSTEMCTL START DHCPCD'
+ALIAS ETHO='SUDO SYSTEMCTL STOP DHCPCD'
 
 #------FUNCTIONS------#
 function syst(){

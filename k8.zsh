@@ -43,4 +43,3 @@ function kgnl() {
 function kggj() {
     kubectl get jobs -A -o wide | rg -i $1
 }
-

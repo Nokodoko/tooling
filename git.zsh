@@ -26,16 +26,9 @@ alias gd='git branch -D $(git branch)'
 alias gd='git branch -D'
 alias iv='sxiv' 
 alias reset='make clean && rm -f config.h && git reset --hard origin/master'
+alias progRefresh='~/scripts/progRefresh.sh'
 
 
-
-function capRefresh() {
-for dir in */; do
-    cd "$dir"
-	git pull
-	cd ..
-done
-}
 #------FUNCTIONS------#
 #function gbranch() {
 #    git checkout $(git branch | fzf)
