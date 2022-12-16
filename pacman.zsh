@@ -6,6 +6,7 @@ alias update='sudo pacman -Syu'
 alias build='sudo pacman -U'
 alias orphan='sudo pacman -Qtdq | pacman -Rns -'
 alias search='sudo pacman -Q'
+alias pacclean='sudo pacman -Scc'
 
 #-------YAY-------#
 alias yupdate='sudo yay -Syu'

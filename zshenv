@@ -89,33 +89,3 @@ function get-source() {
 bindkey '^ ' forward-word
 #. /opt/asdf-vm/asdf.sh
 . "$HOME/.cargo/env"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

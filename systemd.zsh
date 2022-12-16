@@ -1,5 +1,5 @@
 # vim:foldmethod=marker
-#------SYSTEMD------#
+#------systemd------#
 alias stop='sudo systemctl stop'
 alias auto='sudo systemctl enable'
 alias start='sudo systemctl start'
@@ -8,35 +8,35 @@ alias reload='sudo systemctl daemon-reload'
 alias sys='sudo systemctl'
 alias status='systemctl status'
 
-#-----LOGGING-----#
-ALIAS JOURNAL='JOURNALCTL -XE'
-ALIAS VAC='JOURNALCTL --VACUUM-TIME=5D'
+#-----logging-----#
+alias journal='journalctl -xe'
+alias vac='journalctl --vacuum-time=5d'
 
-#------NETCTL------#
+#------netctl------#
 alias wifi='sudo netctl start'
-alias dad='sudo netctl start Dad'
-alias byedad='sudo netctl stop Dad'
-alias here='sudo netctl start wlan0-n0koSpeed'
-alias nothere='sudo netctl stop wlan0-n0koSpeed'
-alias nothere='sudo netctl start wlan0-n0koMove'
-alias nothere='sudo netctl stop wlan0-n0koMove'
-alias there='sudo netctl start wlan0-Verizon-Mifi8800L-43B4'
-alias northere='sudo netctl stop Verizon-Mifi8800L-43B4'
+alias dad='sudo netctl start dad'
+alias byedad='sudo netctl stop dad'
+alias here='sudo netctl start wlan0-n0kospeed'
+alias nothere='sudo netctl stop wlan0-n0kospeed'
+alias nothere='sudo netctl start wlan0-n0komove'
+alias nothere='sudo netctl stop wlan0-n0komove'
+alias there='sudo netctl start wlan0-verizon-mifi8800l-43b4'
+alias northere='sudo netctl stop verizon-mifi8800l-43b4'
 alias why='sudo wifi-menu'
 alias air='aircrack-ng'
 alias blue='bluetoothctl'
 
-#-----NETWORKING-----#
-ALIAS WIOFF='SUDO IP LINK SET WLAN0 DOWN'
-ALIAS WION='SUDO IP LINK SET WLAN0 UP'
-ALIAS ETHOFF='SUDO SYSTEMCTL STOP DHCPCD'
-ALIAS ETHON='SUDO SYSTEMCTL START DHCPCD '
-ALIAS NETCTLOFF='SUDO SYSTEMCTL STOP NETCTL'
-ALIAS NETCTLON='SUDO SYSTEMCTL START NETCTL'
-ALIAS ETH='SUDO SYSTEMCTL START DHCPCD'
-ALIAS ETHO='SUDO SYSTEMCTL STOP DHCPCD'
+#-----networking-----#
+alias wioff='sudo ip link set wlan0 down'
+alias wion='sudo ip link set wlan0 up'
+alias ethoff='sudo systemctl stop dhcpcd'
+alias ethon='sudo systemctl start dhcpcd '
+alias netctloff='sudo systemctl stop netctl'
+alias netctlon='sudo systemctl start netctl'
+alias eth='sudo systemctl start dhcpcd'
+alias etho='sudo systemctl stop dhcpcd'
 
-#------FUNCTIONS------#
+#------functions------#
 function syst(){
     systemctl list-unit-files --type=target
 }
