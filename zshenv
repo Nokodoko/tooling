@@ -47,6 +47,7 @@ source ~/.zsh/tooling/bindings.zsh
 source ~/.zsh/tooling/dunst.zsh
 source ~/.zsh/tooling/keyboards.zsh
 source ~/.zsh/tooling/mount.zsh
+source ~/.zsh/tooling/rust.zsh
 #fzf
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
