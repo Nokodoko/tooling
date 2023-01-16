@@ -35,7 +35,7 @@ alias progRefresh='~/scripts/progRefresh.sh'
 #}
 
 function gdel() {
-    git branch -d $(git branch | fzf)
+    git branch -D $(git branch | fzf)
 }
 
 function gremote(){

@@ -28,3 +28,7 @@ function _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+function f() {
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
+}

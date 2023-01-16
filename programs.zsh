@@ -9,6 +9,7 @@ alias t='tmux'
 alias clip='xclip -sel c'
 alias dmenu='dmenu -m 0 -fn VictorMono:size=11 -nf cyan -nb black -nf cyan -sb black'
 alias gcu='google-chrome-unstable'
+alias dfu='dfu-programmer'
 
 #------FUNCTIONS------#
 function m(){

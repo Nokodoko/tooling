@@ -14,13 +14,14 @@ alias manual='c ~/manuals/'
 alias mirrors='sudo v /etc/pacman.d/mirrorlist'
 alias tool='c ~/.zsh/tooling/'
 alias exp='c ~/.zsh/exports/'
+alias qk='c ~/Programs/qmk_firmware'
 
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
 #alias spell='c ~/scripts'
 
 function spell() {
-    v ~/scripts/$(c ~/scripts/ | awk '{print $3}' | fzf)
+    v ~/scripts/$(c ~/scripts/ | awk '{print $3}' | f)
 }
 
 #dunst
@@ -43,7 +44,7 @@ alias swap='rm ~/.local/share/nvim/swap//%home%n0ko%.zsh.swp'
 alias playbook='c ~/playbooks/'
 
 #hosts
-alias hosts='v /etc/hosts'
+alias hosts='sudo nvim /etc/hosts'
 #golang
 alias alg='c ~/algorithmswithgo.com/module01 &&'
 alias play='c ~/goPlay'
@@ -57,16 +58,20 @@ alias api='c ~/programming/apiClass/'
 
 #configs
 function zconf() {
-    v ~/.zsh/tooling/$(cd ~/.zsh/tooling && exa | fzf)
+    v ~/.zsh/tooling/$(cd ~/.zsh/tooling && exa | f)
 }
 function vconf() {
-    v ~/.config/nvim/lua/n0ko/$(cd ~/.config/nvim/lua/n0ko/ && exa | fzf)
+    v ~/.config/nvim/lua/n0ko/$(cd ~/.config/nvim/lua/n0ko/ && exa | f)
 }
 function exconf() {
-    v ~/.zsh/exports/$(cd ~/.zsh/exports && exa | fzf)
+    v ~/.zsh/exports/$(cd ~/.zsh/exports && exa | f)
 }
 function bs() {
-    v ~/capacity/repos/scripts/bin/$(cd ~/capacity/repos/scripts/bin && exa | fzf)
+    v ~/capacity/repos/scripts/bin/$(cd ~/capacity/repos/scripts/bin && exa | f)
+}
+
+function config() {
+    v $(fd -tf ~/.config | f)
 }
 
 #alias vconf='c ~/.config/nvim/lua/n0ko/'

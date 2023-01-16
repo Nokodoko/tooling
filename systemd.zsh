@@ -10,7 +10,7 @@ alias status='systemctl status'
 
 #-----logging-----#
 alias journal='journalctl -xe'
-alias vac='journalctl --vacuum-time=5d'
+alias vac='sudo journalctl --vacuum-time=5d'
 
 #------netctl------#
 alias wifi='sudo netctl start'

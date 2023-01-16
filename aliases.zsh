@@ -1,5 +1,4 @@
 #------Aliases------#
-alias sudo='sudo '
 source /usr/share/fzf/completion.zsh
 alias dell='n0ko@Dell'
 #alias ip='iptables'
@@ -13,7 +12,6 @@ alias as='arp-scan'
 alias gscan='sudo goscan'
 alias s!='sudo !!'
 alias gr='geo-recon.py'
-alias a='amfora'
 alias lt='litecli'
 alias kc='killall chromium'
 alias pup='pup -c'
@@ -70,7 +68,6 @@ alias makeit='makepkg -si'
 alias s='surfraw'
 alias n0='c ~/n0koSuckless/n0koBuild/'
 alias dm='c ~/n0koSuckless/dmenu'
-alias f='fzf'
 alias test='while sleep 2; do ping archlinux.org; done'
 alias gp='rg'
 alias repo='c ~/capacity/repos/'
@@ -121,4 +118,8 @@ function sb(){
 function mnt() {
     sudo mount $@ /mnt
 
+}
+
+function vf() {
+    v $(f)
 }
