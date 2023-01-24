@@ -17,7 +17,7 @@ function m(){
 }
 
 function mi(){
-    mpv --vf=sub,lavfi="negate" $1 and disown mpv
+    mpv --vf=sub,lavfi="negate" $1 & disown mpv
 }
 
 function key(){
