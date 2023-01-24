@@ -16,6 +16,10 @@ function m(){
     mpv $1 & disown mpv 
 }
 
+function mi(){
+    $mpv --vf=sub,lavfi="negate" $1 and disown mpv
+}
+
 function key(){
     screenkey $1 & disown screenkey 
 }
