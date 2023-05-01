@@ -15,7 +15,6 @@ alias gtv='gotest'
 function g1(){
   go run $1 | column
 }
-alias g='go run'
 alias doc='go doc' 
 alias gm='go run main.go'
 alias gg='go get -u'

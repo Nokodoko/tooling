@@ -8,6 +8,7 @@ alias tfp='TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform plan'
 alias tfa='TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply'
 alias tfaa='TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply -auto-approve'
 alias tfd='TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform destroy'
+alias tfsl='TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform state list'
 
 function tfpv() {
     TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform plan -lock=false -var-file $1 
@@ -17,13 +18,13 @@ function tfpt() {
     TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform plan -target=$1
 } 
 
-function tfaat(){
+function tfat(){
     TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply -auto-approve -target=$1
 } 
 
-function tfat(){
-    TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply $1 -auto-approve -target=$1
-} 
+#function tfat(){
+#    TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform apply $1 -auto-approve -target=$1
+#} 
 
 function tfdt(){
     TF_LOG=DEBUG OCI_GO_SDK_DEBUG=v terraform destroy -auto-approve -target=$1

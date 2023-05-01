@@ -32,6 +32,8 @@ alias ds='dockerscan'
 alias dswarm='docker swarm init'
 alias swarmjoin='docker swarm join-token'
 alias dc='docker-compose'
+alias httpbin='docker run -p 80:80 kennethreitz/httpbin & disown'
+
 
 #------FUNCTIONS------#
 function dcn() {

@@ -1,8 +1,9 @@
 #------OPTIONS TO FZF COMMAND------#
+source /usr/share/fzf/completion.zsh
 export FZF_COMPLETION_OPTS='+c -x'
 export FZF_OPEN_COMMAND=''
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --threads=15 --type f'
 
 function lsf(){
     fzf | xargs mplayer
@@ -30,5 +31,5 @@ function _fzf_comprun() {
 }
 
 function f() {
-    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
+    fzf --layout reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'
 }

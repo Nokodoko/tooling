@@ -13,7 +13,7 @@ alias gcomx='git commit -am'
 #alias gd='git difftool'
 alias gdiff='git diff'
 alias gdh='git difftool HEAD'
-alias gs='colorls --git-status'
+alias gs='git status'
 alias gstatf='git status | fzf'
 alias gadd='git add'
 alias ga='git add --all'
@@ -30,12 +30,12 @@ alias progRefresh='~/scripts/progRefresh.sh'
 
 
 #------FUNCTIONS------#
-#function gbranch() {
-#    git checkout $(git branch | fzf)
-#}
-
+function flisty() {
+    ARG=$@ 
+    fzf --reverse --border --border-label="$ARG"
+}
 function gdel() {
-    git branch -D $(git branch | fzf)
+    git branch -D $(git branch | $(flisty "Delete Branch"))
 }
 
 function gremote(){
@@ -50,5 +50,10 @@ function gco() {
     git checkout -b $1
 }
 function gcco() {
-    git checkout $1
+    git checkout $(git branch -al | flisty 'GIT CHECKOUT')
+}
+
+
+function gcct() {
+    git checkout $(git tag -l | flisty "Git Tags")
 }
