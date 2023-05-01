@@ -8,23 +8,23 @@ function hadd() {
 }
 
 function hu() {
-    helm uninstall $(helm ls | awk '{print $1, $2}' |fzf)
+    helm uninstall $(helm ls | awk '{print $1, $2}' |fzf --layout reverse)
 }
 
 function hhist () {
-    helm history $(cat ~/helmInfo/helmSpeed.md | awk {'print $1'} | fzf)
+    helm history -n $(cat ~/helmInfo/helmSpeed.md | awk {'print $2, $1'} | fzf --layout reverse --border --border-label 'Helm Releases')
 }
 
 function hget () {
-    helm get $(cat ~/helmInfo/helmSpeed.md | awk {'print $1'} | fzf)
+    helm get -n $(cat ~/helmInfo/helmSpeed.md | awk {'print $2, $1'} | fzf --layout reverse --border --border-label 'Helm Releases')
 }
 
 function hstat() {
-    helm status $(cat ~/helmInfo/helmSpeed.md | awk {'print $1'} | fzf)
+    helm status -n $(cat ~/helmInfo/helmSpeed.md | awk {'print $2, $1'} | fzf --layout reverse --border --border-label 'Helm Releases')
 }
 
 function hstats() {
-    helm status $(cat ~/helmInfo/servSpeed.md | awk {'print $1'} | fzf)
+    helm status -n $(cat ~/helmInfo/servSpeed.md | awk {'print $2, $1'} | fzf --layout reverse)
 }
 
 function hls() {
@@ -36,10 +36,15 @@ function hlss() {
 }
 
 function hup() {
-    helm secrets upgrade --install --namespace $(cat ~/helmInfo/helmUpdate.md | fzf | awk '{print $2, $1}') . -f $@
+    helm secrets upgrade --install --namespace $(cat ~/helmInfo/helmUpdate.md | fzf --layout reverse | awk '{print $2, $1}') . -f $@
 }
 
 
 function hups() {
-    helm secrets upgrade --install --namespace $(cat ~/helmInfo/servSpeed.md | fzf | awk '{print $2, $1}') . -f $@
+    helm secrets upgrade --install --namespace $(cat ~/helmInfo/servSpeed.md | fzf --layout reverse | awk '{print $2, $1}') . -f $@
 }
+
+function htemp(){
+    helm template $(hls | awk '{print $1}' | fzf --layout reverse)
+}
+

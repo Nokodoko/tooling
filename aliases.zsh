@@ -8,7 +8,7 @@ alias n='nmap'
 alias w='which'
 alias ac='arp -a'
 alias ipe='ip netns exec'
-alias as='arp-scan'
+alias as='arp-scan --localnet'
 alias gscan='sudo goscan'
 alias s!='sudo !!'
 alias gr='geo-recon.py'
@@ -34,7 +34,6 @@ alias ddwm='cd ~/Programs/dwm/ && gs'
 alias vb='nvim ~/.zshenv'
 alias e='exit'
 alias drc='nvim ~/.config/dunst/dunstrc'
-alias plug='cd ~/.config/nvimBak/plugged && gs'
 alias v='nvim'
 alias clock='tty-clock -cs -C 4'
 alias god='sudo'
@@ -46,7 +45,6 @@ alias cls='clear ; sb'
 alias neo='neofetch'
 alias hg='kitty +kitten hyperlinked_grep'
 alias md='mkdir'
-alias makeit='makepkg -si'
 alias ex='export'
 alias evil='airmon-ng start wlp5s0mon'
 alias evilt='airmon-ng --test wlp5s0mon'
@@ -64,7 +62,6 @@ alias mail='neomutt'
 alias mp='mplayer'
 alias doc='c ~/Documents'
 alias md='mkdir'
-alias makeit='makepkg -si'
 alias s='surfraw'
 alias n0='c ~/n0koSuckless/n0koBuild/'
 alias dm='c ~/n0koSuckless/dmenu'
@@ -74,13 +71,27 @@ alias repo='c ~/capacity/repos/'
 alias um='sudo umount -R /mnt'
 alias cmnt='c /mnt/'
 alias socket='zmodload zsh/net/tcp'
+alias ai='sgpt'
+alias k='kubectl'
 
+alias gback='sudo downgrade glib2=2.74.6'
 
-#alias vpn='openvpn3 session-start --background --config ~/.pass/client.ovpn'
+alias vpn='openvpn3 session-start --background --config ~/.pass/client.ovpn'
 alias vpns='openvpn3 sessions-list'
+
+
+#-----BUILD TOOLS-----#
+alias makeit='makepkg -si'
+alias smci='sudo make clean install'
 
 #------FUNCTION------#
 function c(){
+    cd $1 
+    nvim $(lister.sh)
+    #colorls --git-status
+}
+
+function cl(){
     cd $1 
     colorls --git-status
 }
@@ -105,6 +116,8 @@ function man() {
     nvim -R -c 'set ft=man nomod nolist' -
 }
 
+    #man $(command man -k .  | gum filter | awk '{print $1, $2}')
+
 function mkn(){
     mknod /dev/$1 $2 $3 $4
     cd $1
@@ -119,7 +132,23 @@ function mnt() {
     sudo mount $@ /mnt
 
 }
+function wallpaper() {
+    feh --bg-scale $1
+}
 
 function vf() {
     v $(f)
+}
+
+function vfd() {
+    v $(fd -tf $1)
+}
+
+function cfd() {
+    c $(fd -td $1)
+}
+
+function ldf(){
+    c $1
+    colorls --git-status
 }

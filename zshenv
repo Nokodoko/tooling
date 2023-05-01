@@ -7,6 +7,9 @@ bindkey -M vicmd v edit-command-line
 [[ $- != *i* ]] && return
 fpath=(~/.zsh/completion $fpath)
 set -o vi
+set -o ignoreeof
+
+#pfetch | lolcat
 
 #bunnyfetch | lolcat
 #export PF_COL1=4
@@ -27,9 +30,9 @@ source ~/.zsh/tooling/fzf.zsh
 source ~/.zsh/tooling/git.zsh
 source ~/.zsh/tooling/go.zsh
 source ~/.zsh/tooling/jira.zsh
-source ~/.zsh/tooling/k8.zsh
+source ~/.zsh/tooling/ai.zsh
 source ~/.zsh/tooling/lsp.zsh
-source ~/.zsh/tooling/npm.zsh
+#source ~/.zsh/tooling/npm.zsh
 source ~/.zsh/tooling/pacman.zsh
 source ~/.zsh/tooling/programs.zsh
 source ~/.zsh/exports/ssh.zsh
@@ -39,10 +42,11 @@ source ~/.zsh/tooling/terraform.zsh
 source ~/.zsh/tooling/xserver.zsh
 source ~/.zsh/tooling/init.zsh
 source ~/.zsh/tooling/ansible.zsh
-source ~/.zsh/tooling/ip.zsh
+#source ~/.zsh/tooling/ip.zsh
 source ~/.zsh/exports/capacity.zsh
 source ~/.zsh/tooling/helm.zsh
-source ~/.zsh/tooling/tmux.zsh
+#source ~/.zsh/tooling/tmux.zsh
+source ~/.zsh/tooling/k8.zsh
 source ~/.zsh/tooling/bindings.zsh
 source ~/.zsh/tooling/dunst.zsh
 source ~/.zsh/tooling/keyboards.zsh
@@ -53,11 +57,6 @@ source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/Programs/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-#-----paths-----#
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:~/go/src/scripts:~/go/bin:~/proto/prac2/:/usr/local/bin/rofi-surfraw:/usr/lib/surfraw:~/.config/lynx/lynx.cfg:${PATH}:~/Videos/Udemy/shellScripting/shellclass/localusers/:~/.gem/ruby/3.0.0/bin/:~/capacity/repos/scripts/bin/:~/capacity/repos/helpers:~/aws:~/.cargo/bin/:/usr/sbin/pyenv:~/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/:/home/n0ko/.local/share/nvim/lsp_servers/pylsp/venv/bin:/home/n0ko/.local/lib/python3.10/site-packages:/home/n0ko/.local/share/nvim/lsp_servers/bash/:~/.local/bin/:/home/n0ko/scripts/:/home/n0ko/.local/share/nvim/lsp_servers/terraform/terraform-ls::/home/n0ko/.local/share/nvim/lsp_servers/efm/efm-langserver:/home/n0ko/.local/lsp_servers/clojure_lsp/:~/n0koSuckless/slstatus/components:$HOME/Programs/phyOS-dwm/dwmblocksconfig/scripts/:$HOME/.config/phyos/dwmblocks:$HOME/.local/share/nvim/lsp_servers/rust_analyzer/rust-analyzer
-
-export GOPATH=~/go/:~/programming/go/:~/goProjects/:~/compSci/:~/ardProject/:~/aws:$GOPATH/bin
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"

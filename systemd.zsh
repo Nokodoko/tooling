@@ -26,6 +26,10 @@ alias why='sudo wifi-menu'
 alias air='aircrack-ng'
 alias blue='bluetoothctl'
 
+#-----ctl-----#
+alias bus='busctl'
+alias cdc='coredumpctl'
+
 #-----networking-----#
 alias wioff='sudo ip link set wlan0 down'
 alias wion='sudo ip link set wlan0 up'

@@ -13,7 +13,7 @@ alias gcomx='git commit -am'
 #alias gd='git difftool'
 alias gdiff='git diff'
 alias gdh='git difftool HEAD'
-alias gs='colorls --git-status'
+alias gs='git status'
 alias gstatf='git status | fzf'
 alias gadd='git add'
 alias ga='git add --all'
@@ -50,5 +50,10 @@ function gco() {
     git checkout -b $1
 }
 function gcco() {
-    git checkout $1
+    git checkout $(git branch -al | fzf --reverse)
+}
+
+
+function gcct() {
+    git checkout $(git tag -l | fzf --reverse)
 }

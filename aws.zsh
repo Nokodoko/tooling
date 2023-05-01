@@ -2,16 +2,16 @@
 export PATH=/local/bin/:$PATH
 export AWS_CLI_AUTO_PROMPT=on-partial
 
-alias awsh='cat ~/.zsh/tooling/aws.zsh'
-alias awslsUsers='~/scripts/awsListUsers.sh'
-alias awsListGroupsForUsers='~/scripts/awsListGroupsForUsers.sh'
+#alias awsh='cat ~/.zsh/tooling/aws.zsh'
+#alias awslsUsers='~/scripts/awsListUsers.sh'
+#alias awsListGroupsForUsers='~/scripts/awsListGroupsForUsers.sh'
 alias awslsGroups='aws iam list-groups | gp -i groupname'
-alias awslsInstanceProfiles='~/scripts/awsListInstanceProfiles.sh'
-alias awslsDbInstanceIdentifiers='~/scripts/awsListDbInstanceIdentifiers.sh'
-alias awsDescribeDbInstance='~/scripts/awsDescribeDbInstance.sh'
+#alias awslsInstanceProfiles='~/scripts/awsListInstanceProfiles.sh'
+#alias awslsDbInstanceIdentifiers='~/scripts/awsListDbInstanceIdentifiers.sh'
+#alias awsDescribeDbInstance='~/scripts/awsDescribeDbInstance.sh'
 
 #reset user-password
-alias awsresetPass='~/scripts/awsResetPass.zsh'
+#alias awsresetPass='~/scripts/awsResetPass.zsh'
 
 #check caller
 alias awsid='aws sts get-caller-identity'
@@ -105,6 +105,11 @@ function addpolicy(){
 function addpolicyh(){
     echo "group-name, policy-document, policy-name\n HINT: use 'file://<fileName>' if the policy is too large!"
 }
+
+#get a list of loadbalancer names:
+#aws elb describe-load-balancers --query 'LoadBalancerDescriptions[*].TagName'
+
+
 
 #####ECR#####
 alias ecrRepos='~/scripts/ecrRepos.sh'
