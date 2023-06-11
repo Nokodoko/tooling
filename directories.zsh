@@ -1,4 +1,8 @@
 #------DIRECTORIES------#
+function flist() {
+    ARG=$@
+    fzf --layout reverse --border --border-label="$ARG" --preview 'bat --style=numbers --color=always --line-range :500 {}'
+}
 alias exe='c /usr/local/bin'
 alias down='c ~/Downloads'
 alias resume='c ~/Downloads/resumes'
@@ -8,6 +12,8 @@ function prog(){
     cd  $(fd -td -d1 | fzf --layout reverse --border --border-label='Programs' --preview 'bat --style=numbers --color=always --line-range :500 {}')
 
 }
+
+
 alias port='c ~/Portfolio'
 alias vid='c ~/Videos'
 alias pic='c ~/Pictures'
@@ -17,7 +23,7 @@ alias music='c ~/music'
 alias ws='wiki-search'
 alias manual='c ~/manuals/'
 alias mirrors='sudo v /etc/pacman.d/mirrorlist'
-alias tool='c ~/.zsh/tooling/'
+alias tool='cl ~/.zsh/tooling/'
 alias exp='c ~/.zsh/exports/'
 alias qk='c ~/Programs/qmk_firmware'
 
@@ -71,7 +77,7 @@ function zconf() {
 }
 function vconf() {
     pushd ~/.config/nvim
-    v $(fd -e lua . | f --border --border-labels='Neovim Configurations')
+    v $(fd -e lua . | flist "Neovim Configurations")
 }
 function exconf() {
     v ~/.zsh/exports/$(cd ~/.zsh/exports && exa | fzf --layout reverse --border --border-label='Export Configurations' --preview 'bat --style=numbers --color=always --line-range :500 {}')

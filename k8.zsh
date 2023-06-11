@@ -46,3 +46,19 @@ function kconf(){
     kubeconform -kubernetes-version $1
 }
 
+function kdep() {
+    kubectl deprications --k8s-version v"$@"
+}
+
+function cordon() {
+    kubectl cordon $(kubectl get node | awk '{print $0}' | sort -k4nr | flist "Cordon Nodes" | awk '{print $1};')
+}
+
+function drain() {
+    kubectl drain --delete-emptydir-data --ignore-daemonsets \
+        $(kubectl get node | awk '{print $0}' | sort -k4nr | flist "Cordon Nodes" | awk '{print $1};')
+}
+
+function podWatch() {
+    kubectl get pods -A --watch | egrep -v "1/1|2/2|3/3|4/4|5/5|6/6|Completed"
+}

@@ -30,12 +30,12 @@ alias progRefresh='~/scripts/progRefresh.sh'
 
 
 #------FUNCTIONS------#
-#function gbranch() {
-#    git checkout $(git branch | fzf)
-#}
-
+function flisty() {
+    ARG=$@ 
+    fzf --reverse --border --border-label="$ARG"
+}
 function gdel() {
-    git branch -D $(git branch | fzf)
+    git branch -D $(git branch | $(flisty "Delete Branch"))
 }
 
 function gremote(){
@@ -50,10 +50,10 @@ function gco() {
     git checkout -b $1
 }
 function gcco() {
-    git checkout $(git branch -al | fzf --reverse)
+    git checkout $(git branch -al | flisty 'GIT CHECKOUT')
 }
 
 
 function gcct() {
-    git checkout $(git tag -l | fzf --reverse)
+    git checkout $(git tag -l | flisty "Git Tags")
 }

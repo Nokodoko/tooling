@@ -73,6 +73,8 @@ alias cmnt='c /mnt/'
 alias socket='zmodload zsh/net/tcp'
 alias ai='sgpt'
 alias k='kubectl'
+alias pb='~/.config/polybar/colorblocks/launch.sh'
+alias poly='polybar'
 
 alias gback='sudo downgrade glib2=2.74.6'
 

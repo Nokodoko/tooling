@@ -1,4 +1,5 @@
 #------OPTIONS TO FZF COMMAND------#
+source /usr/share/fzf/completion.zsh
 export FZF_COMPLETION_OPTS='+c -x'
 export FZF_OPEN_COMMAND=''
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
