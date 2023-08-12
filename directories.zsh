@@ -24,7 +24,7 @@ alias ws='wiki-search'
 alias manual='c ~/manuals/'
 alias mirrors='sudo v /etc/pacman.d/mirrorlist'
 alias tool='cl ~/.zsh/tooling/'
-alias exp='cl ~/.zsh/exports/'
+alias exp='c ~/.zsh/exports/'
 alias qk='c ~/Programs/qmk_firmware'
 
 #arch
