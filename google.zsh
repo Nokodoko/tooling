@@ -10,6 +10,6 @@ function gcj() {
 }
 
 #-----aliases-----#
-function g() {
+function gcl() {
     gcloud $@
 }

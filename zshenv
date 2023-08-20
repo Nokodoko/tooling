@@ -50,18 +50,18 @@ source ~/.zsh/tooling/helm.zsh
 source ~/.zsh/tooling/k8.zsh
 source ~/.zsh/tooling/bindings.zsh
 source ~/.zsh/tooling/dunst.zsh
+source ~/.zsh/tooling/keyboards.zsh
 source ~/.zsh/tooling/mount.zsh
 source ~/.zsh/tooling/rust.zsh
 source ~/.zsh/tooling/networking.zsh
 source ~/.zsh/tooling/polybar.zsh
-#keyboards
-source ~/.zsh/tooling/keyboards.zsh
-source ~/.zsh/tooling/qmk.zsh
 #fzf
 source ~/.fzf/key-bindings.zsh
-source ~/.zsh/tooling/completion.zsh
+source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/Programs/zsh-autosuggestions/zsh-autosuggestions.zsh
+#lua
+source ~/.zsh/tooling/lua.zsh
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -78,7 +78,7 @@ alias nsc='notify-send -u critical hello'
 #Functions
 function chx(){
     #sudo chmod +x $1 && sudo cp $1 /usr/local/bin/
-    chmod +x $1
+    chmod +x $1 
 }
 
 function p(){
@@ -103,14 +103,4 @@ if [ -f '/home/n0ko/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/n0
 if [ -f '/home/n0ko/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/n0ko/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export GPG_TTY=$(tty)
-
-
-
-
-
-
-
-
-
-
 

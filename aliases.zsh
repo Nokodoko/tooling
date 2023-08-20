@@ -139,7 +139,7 @@ function wallpaper() {
 }
 
 function vf() {
-    v $(f)
+    v $(flist $( basename $( pwd )))
 }
 
 function vfd() {

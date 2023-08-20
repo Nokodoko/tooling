@@ -28,6 +28,7 @@ alias iv='sxiv'
 alias reset='make clean && rm -f config.h && git reset --hard origin/master'
 alias progRefresh='~/scripts/progRefresh.sh'
 
+alias g='gh'
 
 #------FUNCTIONS------#
 function flisty() {
@@ -56,4 +57,12 @@ function gcco() {
 
 function gcct() {
     git checkout $(git tag -l | flisty "Git Tags")
+}
+
+function grcp() {
+    gh repo create $1 --public --clone
+}
+
+function grcP() {
+    gh repo create $1 --private --clone
 }

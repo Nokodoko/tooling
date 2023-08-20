@@ -1,6 +1,6 @@
 alias nuphyH='sudo kmonad ~/.config/kmonad/nuphyHard.kbd & disown'
 alias nuphy='sudo kmonad ~/.config/kmonad/nuphy.kbd & disown'
-alias gmmsudo k='kmonad ~/.config/kmonad/gmmkCompact.kbd & disown'
+alias gmmk='sudo kmonad ~/.config/kmonad/gmmkCompact.kbd & disown'
 alias anne='sudo kmonad ~/.config/kmonad/anne.kbd & disown'
 alias anneH='sudo kmonad ~/.config/kmonad/anneHard.kbd & disown'
 alias rev='sudo kmonad ~/.config/kmonad/reviung41.kbd & disown'
