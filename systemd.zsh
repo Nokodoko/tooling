@@ -6,12 +6,18 @@ alias start='sudo systemctl start'
 alias restart='sudo systemctl restart'
 alias reload='sudo systemctl daemon-reload'
 alias sys='sudo systemctl'
-alias status='systemctl status'
+alias status='sudo systemctl status'
 
 #-----logging-----#
-alias journal='journalctl -xe'
 alias vac='sudo journalctl --vacuum-time=5d'
 
+function jf() {
+    sudo journalctl -u $@ -f
+}
+
+function j() {
+    sudo journalctl -u $@ 
+}
 #------netctl------#
 alias wifi='sudo netctl start'
 alias dad='sudo netctl start dad'
@@ -59,6 +65,3 @@ function sys_r(){
     sudo systemctl reload $1 
 }
 
-function j() {
-    journalctl -xe | rg -i $@
-}

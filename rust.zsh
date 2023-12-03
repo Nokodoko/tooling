@@ -12,7 +12,7 @@ function cri() {
 }
 
 function rusty() {
-    v $(fd -e rs . --full-path ~/programming/rust/ | flist "Rusty")
+    v $(fd -e rs . --full-path ~/programming/rust_projects/ | flist "Rusty")
     #pushd ~/programming && v $(fd -e rs | $(flist "Rusty"))
 }
 

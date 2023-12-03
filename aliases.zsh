@@ -35,6 +35,7 @@ alias vb='nvim ~/.zshenv'
 alias e='exit'
 alias drc='nvim ~/.config/dunst/dunstrc'
 alias v='nvim'
+alias vbare='nvim -u NONE'
 alias clock='tty-clock -cs -C 4'
 alias god='sudo'
 alias lx='v ~/.config/lynx/lynx.cfg'
@@ -140,6 +141,10 @@ function wallpaper() {
 
 function vf() {
     v $(flist $( basename $( pwd )))
+}
+
+function cf() {
+    cl $(flist $( fd -td ))
 }
 
 function vfd() {

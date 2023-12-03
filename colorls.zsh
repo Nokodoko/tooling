@@ -1,7 +1,7 @@
 #------colorls------#
 alias l='colorls -1 --git-status'
 alias ls='colorls --git-status'
-alias lsd='colorls -d git-status'
+#alias lsd='colorls -d git-status'
 alias ll='colorls -1 --git-status'
 alias la='colorls --git-status -a'
 #alias ls='colorls --sd'

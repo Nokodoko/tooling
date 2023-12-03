@@ -4,19 +4,19 @@ function flist() {
     fzf --layout reverse --border --border-label="$ARG" --preview 'bat --style=numbers --color=always --line-range :500 {}'
 }
 alias exe='c /usr/local/bin'
-alias down='c ~/Downloads'
+alias down='cl ~/Downloads'
 alias resume='c ~/Downloads/resumes'
-#alias prog='c ~/Programs'
-function prog(){
-    pushd ~/Programs 
-    cd  $(fd -td -d1 | fzf --layout reverse --border --border-label='Programs' --preview 'bat --style=numbers --color=always --line-range :500 {}')
-
-}
+alias prog='cl ~/Programs'
+#function prog(){
+#    pushd ~/Programs 
+#    cd  $(fd -td -d1 | fzf --layout reverse --border --border-label='Programs' --preview 'bat --style=numbers --color=always --line-range :500 {}')
+#
+#}
 
 
 alias port='c ~/Portfolio'
 alias vid='c ~/Videos'
-alias pic='c ~/Pictures'
+alias pic='cl ~/Pictures'
 alias udemy='c ~/Videos/Udemy'
 alias mit='c ~/MIT'
 alias music='c ~/music'
@@ -26,6 +26,7 @@ alias mirrors='sudo v /etc/pacman.d/mirrorlist'
 alias tool='cl ~/.zsh/tooling/'
 alias exp='c ~/.zsh/exports/'
 alias qk='c ~/Programs/qmk_firmware'
+alias forest='cl ~/forest/'
 
 #arch
 alias arch='c /usr/share/doc/arch-wiki/html/en/'
@@ -52,10 +53,10 @@ alias lspconfig='c /home/n0ko/.local/share/nvim/site/pack/packer/start/nvim-lspc
 
 #nvim directories
 function plug (){
-    pushd ~/.local/share/nvim/site/pack/packer/start/ && \
+    pushd ~/.local/share/nvim/lazy/ && \
         c $(fd -td -d1 |fzf --layout reverse --border --border-label='Neovim Plugins' --preview 'bat --style=numbers --color=always --line-range :500 {}') 
 }
-alias plugin='cl ~/.local/share/nvim/site/pack/packer/start/'
+alias plugin='cl ~/.local/share/nvim/lazy/'
 alias sv='sudo nvim'
 alias swapped='rm ~/.local/share/nvim/swap//%home%n0ko%.config%nvim%init.vim.swp'
 alias swap='rm ~/.local/share/nvim/swap//%home%n0ko%.zsh.swp'
@@ -93,6 +94,15 @@ function config() {
     v $(fd -tf | fzf --layout reverse --border --border-label='Configurations' --preview 'bat --style=numbers --color=always --line-range :500 {}')
 }
 
+net(){  
+    pushd ~/.zsh/networking/
+    vf
+}
+
+apps () {
+    pushd ~/codebase/
+    v  $(fd -tf --full-path ~/codebase/ | fzf --layout reverse --border --border-label='Codebase' --preview 'bat --style=numbers --color=always --line-range :500 {}')
+}
 #alias vconf='c ~/.config/nvim/lua/n0ko/'
 alias vv='v ~/.config/nvim/init.lua'
 alias mconf='v ~/.config/neomutt/neomuttrc'
@@ -102,5 +112,5 @@ alias n0='c ~/n0koSuckless/n0koBuild/'
 alias sl='c ~/n0koSuckless/slstatus/'
 alias dm='c ~/n0koSuckless/dmenu-5.1/'
 alias sl='c ~/n0koSuckless/slstatus'
-alias km='v ~/.config/kmonad/config.kbd'
+alias km='v ~/.config/kmonad/onboard.kbd'
 alias ky='v ~/.config/kitty/kitty.conf'

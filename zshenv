@@ -7,7 +7,6 @@ bindkey -M vicmd v edit-command-line
 [[ $- != *i* ]] && return
 fpath=(~/.zsh/completion $fpath)
 set -o vi
-set -o ignoreeof
 
 #pfetch | lolcat
 
@@ -29,7 +28,6 @@ source ~/.zsh/tooling/docker.zsh
 source ~/.zsh/exports/exports.zsh
 source ~/.zsh/tooling/fzf.zsh
 source ~/.zsh/tooling/git.zsh
-source ~/.zsh/tooling/go.zsh
 source ~/.zsh/tooling/jira.zsh
 source ~/.zsh/tooling/ai.zsh
 source ~/.zsh/tooling/lsp.zsh
@@ -39,33 +37,40 @@ source ~/.zsh/tooling/programs.zsh
 source ~/.zsh/exports/ssh.zsh
 source ~/.zsh/tooling/starship.zsh
 source ~/.zsh/tooling/systemd.zsh
-source ~/.zsh/tooling/terraform.zsh
 source ~/.zsh/tooling/xserver.zsh
 source ~/.zsh/tooling/init.zsh
-source ~/.zsh/tooling/ansible.zsh
-#source ~/.zsh/tooling/ip.zsh
-source ~/.zsh/exports/capacity.zsh
+source ~/.zsh/tooling/zellij.zsh
+source ~/.zsh/tooling/bindkey.zsh
+source ~/.zsh/exports/networks.zsh
 source ~/.zsh/tooling/helm.zsh
+source ~/.zsh/tooling/mail.zsh
+source ~/.zsh/tooling/datadog.zsh
+source ~/.zsh/tooling/usda.zsh
+
 #source ~/.zsh/tooling/tmux.zsh
 source ~/.zsh/tooling/k8.zsh
 source ~/.zsh/tooling/bindings.zsh
 source ~/.zsh/tooling/dunst.zsh
 source ~/.zsh/tooling/keyboards.zsh
 source ~/.zsh/tooling/mount.zsh
-source ~/.zsh/tooling/rust.zsh
-source ~/.zsh/tooling/networking.zsh
 source ~/.zsh/tooling/polybar.zsh
 #fzf
 source ~/.fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/Programs/zsh-autosuggestions/zsh-autosuggestions.zsh
-#lua
+#languages
 source ~/.zsh/tooling/lua.zsh
+source ~/.zsh/tooling/python.zsh
+source ~/.zsh/tooling/go.zsh
+source ~/.zsh/tooling/rust.zsh
+source ~/.zsh/tooling/terraform.zsh
+source ~/.zsh/tooling/ansible.zsh
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+eval "$(luarocks path --bin)"
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
@@ -102,5 +107,4 @@ if [ -f '/home/n0ko/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/n0
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/n0ko/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/n0ko/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-export GPG_TTY=$(tty)
-
+###echo 'eval "$(zellij setup --generate-auto-start zsh)"' >> ~/.zshrc
