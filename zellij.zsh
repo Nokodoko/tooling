@@ -8,9 +8,12 @@ zks(){
 }
 
 za(){
-    zellij attach $(zl | flisty 'Zellij Sessions')
+    zellij attach $(zellij list-sessions | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}'| flisty 'Zellij Sessions')
 }
 
+zd(){
+    zellij delete $(zellij list-sessions | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}'| flisty 'Zellij Sessions')
+}
 
 #---LAYOUTS---#
 alias z1='zellij --layout=/home/n0ko/.config/zellij/layouts/lay1.kdl'

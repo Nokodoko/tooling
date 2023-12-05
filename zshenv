@@ -49,7 +49,6 @@ source ~/.zsh/tooling/usda.zsh
 
 #source ~/.zsh/tooling/tmux.zsh
 source ~/.zsh/tooling/k8.zsh
-source ~/.zsh/tooling/bindings.zsh
 source ~/.zsh/tooling/dunst.zsh
 source ~/.zsh/tooling/keyboards.zsh
 source ~/.zsh/tooling/mount.zsh
